@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.dranser.androidsimsimi.MainActivity">
 
-   
+    <android.support.design.widget.FloatingActionButton
+        android:clickable="true"
+        android:src="@drawable/ic_enviar"
+        android:id="@+id/fab"
+        android:tint="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-</android.support.constraint.ConstraintLayout>
+    <ListView
+       android:layout_above="@+id/fab"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentTop="true"
+       android:id="@+id/lista_mensajes"
+       android:layout_marginBottom="20dp"
+       android:stackFromBottom="true"
+       android:transcriptMode="alwaysScroll"
+       android:dividerHeight="0dp"
+       android:divider="@android:color/transparent"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"></ListView>
+
+    <EditText
+        android:layout_toLeftOf="@+id/fab"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/mensaje_usuario"
+        android:hint="Escribe el mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>
